@@ -38,12 +38,12 @@ export function NavigationArrows({ disableLeftArrow, disableRightArrow, prevCat,
   return (
     <>
       <div className="arrow-left">
-        <IconButton disabled={disableLeftArrow} onClick={prevCat} color="secondary">
+        <IconButton disabled={disableLeftArrow} onClick={prevCat} color="secondary" aria-label="Стрелка назад">
           <ArrowBackIosIcon />
         </IconButton>
       </div>
       <div className="arrow-right">
-        <IconButton disabled={disableRightArrow} onClick={nextCat} color="secondary">
+        <IconButton disabled={disableRightArrow} onClick={nextCat} color="secondary" aria-label="Стрелка вперед">
           <ArrowForwardIosIcon />
         </IconButton>
       </div>
@@ -120,5 +120,5 @@ export function GetCatHomeAccordion() {
 }
 
 export function CatPosition({ index, arrayLength }: CatPositionProps) {
-  return <div className="flex-column-center mt-20">{`${index + 1} / ${arrayLength}`}</div>
+  return <div className="cat-position">{`${index + 1} / ${arrayLength}`}</div>
 }

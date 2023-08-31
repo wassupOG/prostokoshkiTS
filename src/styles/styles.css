@@ -27,7 +27,7 @@ body {
   border-radius: 15px;
   margin-bottom: 10px;
   background-color: #242526;
-  min-height: 375px;
+  min-height: 330px;
 }
 
 .arrow-left {
@@ -43,8 +43,9 @@ body {
 
 .cat-position {
   position: absolute;
-  bottom: 8px;
-  right: 50%;
+  top: 15px;
+  left: 15px;
+  font-weight: bold;
 }
 
 .arrow-right {
@@ -306,7 +307,7 @@ a:hover {
 
 @media all and (max-width: 700px) {
   .cat-profile {
-    min-height: 575px;
+    min-height: 545px;
   }
   .flex-profile {
     flex-direction: column;
@@ -396,6 +397,10 @@ a:hover {
   .cat-profile {
     background-color: transparent;
     padding: 0px;
-    min-height: 515px;
+    min-height: 460px;
+  }
+  .cat-position {
+    top: 0px;
+    left: 0px;
   }
 }/*# sourceMappingURL=styles.css.map */

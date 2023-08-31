@@ -43,7 +43,7 @@ body {
   border-radius: 15px;
   margin-bottom: 10px;
   background-color: $elevation-2;
-  min-height: 375px;
+  min-height: 330px;
 }
 @mixin arrows {
   opacity: 0.9;
@@ -62,8 +62,9 @@ body {
 
 .cat-position {
   position: absolute;
-  bottom: 8px;
-  right: 50%;
+  top: 15px;
+  left: 15px;
+  font-weight: bold;
 }
 
 .arrow-right {
@@ -337,7 +338,7 @@ a {
 
 @media all and (max-width: 700px) {
   .cat-profile {
-    min-height: 575px;
+    min-height: 545px;
   }
 
   .flex-profile {
@@ -445,6 +446,11 @@ a {
   .cat-profile {
     background-color: transparent;
     padding: 0px;
-    min-height: 515px;
+    min-height: 460px;
+  }
+
+  .cat-position {
+    top: 0px;
+    left: 0px;
   }
 }

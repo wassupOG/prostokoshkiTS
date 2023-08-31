@@ -12,6 +12,7 @@ export default function Profile({ setIndex, handleFavCats, favCats, index, filte
     return (
       <>
         <div className="cat-profile">
+          <CatPosition index={index} arrayLength={filteredArray.length} />
           <HeartIconProfile isFavorite={favCats.includes(filteredArray[index].img)} onClick={() => handleFavCats(filteredArray[index].img)} />
 
           <NavigationArrows
@@ -49,7 +50,6 @@ export default function Profile({ setIndex, handleFavCats, favCats, index, filte
           </div>
 
           <GetCatHomeAccordion />
-          <CatPosition index={index} arrayLength={filteredArray.length} />
         </div>
       </>
     )
