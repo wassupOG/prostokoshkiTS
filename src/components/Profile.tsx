@@ -1,5 +1,5 @@
 import { Accordion, AccordionDetails, AccordionGroup, AccordionSummary, accordionClasses } from "@mui/joy"
-import { ProfileProps } from "../helpers/data"
+import { ProfileProps } from "../helpers/interfaces"
 import { vkSVG } from "../helpers/icons"
 import { IconButton, Tooltip, Typography } from "@mui/material"
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
@@ -39,18 +39,17 @@ export default function Profile({ setIndex, handleFavCats, favCats, index, filte
     )
   }
 
-  let displayedProfile
   if (filteredArray[0].category === "S") {
-    displayedProfile = (
+    return (
       <>
         <div className="cat-profile">
           <div className="arrow-left">
-            <IconButton disabled={disableLeftArrow} onClick={() => setIndex(index - 1)} color="secondary" variant="outlined">
+            <IconButton disabled={disableLeftArrow} onClick={() => setIndex(index - 1)} color="secondary">
               <ArrowBackIosIcon />
             </IconButton>
           </div>
           <div className="arrow-right">
-            <IconButton disabled={disableRightArrow} onClick={() => setIndex(index + 1)} color="secondary" variant="outlined">
+            <IconButton disabled={disableRightArrow} onClick={() => setIndex(index + 1)} color="secondary">
               <ArrowForwardIosIcon />
             </IconButton>
           </div>
@@ -71,7 +70,7 @@ export default function Profile({ setIndex, handleFavCats, favCats, index, filte
               <div className="cat-facts">
                 <Typography variant="subtitle1">
                   <div>Возраст: {filteredArray[index].age}</div>
-                  {filteredArray[index].basics.split("/").map((info, index) => {
+                  {filteredArray[index].basics!.split("/").map((info: string, index: number) => {
                     return <div key={index}>{info}</div>
                   })}
                 </Typography>
@@ -150,9 +149,10 @@ export default function Profile({ setIndex, handleFavCats, favCats, index, filte
       </>
     )
   } else {
-    displayedProfile = (
+    return (
       <>
         <div className="cat-profile">
+          {heartIcon}
           <div className="flex-profile">
             <img className="profile-picture" src={`/images/found_home/${filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
             <div>
@@ -166,5 +166,4 @@ export default function Profile({ setIndex, handleFavCats, favCats, index, filte
       </>
     )
   }
-  return displayedProfile
 }

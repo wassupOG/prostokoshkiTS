@@ -1,11 +1,12 @@
 import { ChangeEvent, useEffect, useState } from "react"
-import { SearchingCats, CatsInterface } from "../helpers/data"
+import { SearchingCats } from "../helpers/data"
 import Gallery from "../components/Gallery"
 import ToggleSearch from "../components/ToggleSearch"
-import NotFoundGallery from "../components/NotFoundGallery"
+import NotFoundGallery from "../components/ErrorComponents/NotFoundGallery"
 import Profile from "../components/Profile"
-import NotFoundProfile from "../components/NotFoundProfile"
 import Filters from "../components/Filters"
+import { CatsInterface } from "../helpers/interfaces"
+import NotFoundProfile from "../components/ErrorComponents/NotFoundProfile"
 
 export default function SearchPage() {
   const [toggles, setToggles] = useState(() => [])
@@ -71,7 +72,6 @@ export default function SearchPage() {
             favCats={favCats}
             setFilterOptions={setFilterOptions}
             filterOptions={filterOptions}
-            filteredArray={filteredArray}
           />
         </div>
         <Gallery handleFavCats={handleFavCats} favCats={favCats} filteredArray={filteredArray} setIndex={setIndex} index={index} />
@@ -93,7 +93,6 @@ export default function SearchPage() {
           />
           <Filters
             toggles={toggles}
-            filteredArray={filteredArray}
             setToggles={setToggles}
             setIndex={setIndex}
             favCats={favCats}

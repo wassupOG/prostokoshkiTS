@@ -1,34 +1,30 @@
 import { ToggleButtonGroup } from "@mui/material"
 import React from "react"
 import { CustomToggleButton } from "../helpers/styling"
-import { FilterOptions, FilterProps } from "../helpers/data"
+import { FilterOptions, FilterProps } from "../helpers/interfaces"
 
 export default function Filters({ toggles, favCats, setToggles, setIndex, setFilterOptions, filterOptions }: FilterProps) {
-  let disableFav = false
-  if (!favCats.length) {
-    disableFav = true
-  }
-  function handleDevices(_event: React.MouseEvent<HTMLElement>, newToggles: string[]): void {
-    const changedKeys: string[] = []
+  const disableFav = !favCats.length ? true : false
 
-    // Identify which keys to change based on entered and exited toggles
-    toggles.forEach((toggle) => {
-      if (!newToggles.includes(toggle)) {
-        changedKeys.push(toggle)
+  function handleFilters(_event: React.MouseEvent<HTMLElement>, newToggles: never[]): void {
+    let changedKey: string = ""
+    // * If a toggle from newToggles isn't in incoming toggles this key has to be changed to true since it has been added
+    newToggles.forEach((newToggle: never) => {
+      if (!toggles.includes(newToggle)) {
+        changedKey = newToggle
       }
     })
 
-    newToggles.forEach((toggle) => {
-      if (!toggles.includes(toggle)) {
-        changedKeys.push(toggle)
+    // * If a toggle from toggles isn't in newToggles - this key has to be changed to false since it has been removed
+    toggles.forEach((incomingToggle) => {
+      if (!newToggles.includes(incomingToggle)) {
+        changedKey = incomingToggle
       }
     })
 
-    // Apply changes to filterOptions
+    // * Apply changes to filterOptions. We reverse all keys present in changedKeys
     const updatedFilterOptions: FilterOptions = { ...filterOptions }
-    changedKeys.forEach((key) => {
-      updatedFilterOptions[key] = !updatedFilterOptions[key]
-    })
+    updatedFilterOptions[changedKey] = !updatedFilterOptions[changedKey]
 
     // Update states
     setIndex(0)
@@ -37,7 +33,7 @@ export default function Filters({ toggles, favCats, setToggles, setIndex, setFil
   }
 
   return (
-    <ToggleButtonGroup value={toggles} color="secondary" onChange={handleDevices} aria-label="device">
+    <ToggleButtonGroup value={toggles} color="secondary" onChange={handleFilters} aria-label="device">
       <CustomToggleButton disabled={disableFav} value="favOnly">
         Избранное
       </CustomToggleButton>

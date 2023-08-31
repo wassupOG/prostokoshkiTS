@@ -1,7 +1,8 @@
 import { Tabs } from "@mui/material"
-import { HomeCats, SearchingCats, ToggleSearchProps } from "../helpers/data"
+import { HomeCats, SearchingCats } from "../helpers/data"
 import * as React from "react"
 import { CustomInput, CustomTabButton } from "../helpers/styling"
+import { ToggleSearchProps } from "../helpers/interfaces"
 
 export default function ToggleSearch({ setToggles, setFilterOptions, setInput, setDisplayedArrayType, handleInput, setIndex, input }: ToggleSearchProps) {
   const [catsType, setCatsType] = React.useState(true)

@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import { helpIcon, instSVG, vkSVG } from "../helpers/icons";
+import { Link } from "react-router-dom"
+import { helpIcon, instSVG, vkSVG } from "../helpers/icons"
 
 export default function Navbar() {
   return (
     <>
       <nav>
         <Link className="logo-link" to="/">
-          <img className="logo" src="/images/logos/logo50px.jpg" alt="Логотип" />
+          <img className="logo" src="/images/logos/logo100px.jpg" alt="Логотип" />
         </Link>
         <Link className="svg-icon" to="/help">
           {helpIcon}
@@ -19,5 +19,5 @@ export default function Navbar() {
         </a>
       </nav>
     </>
-  );
+  )
 }

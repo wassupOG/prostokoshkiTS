@@ -1,4 +1,4 @@
-import { GalleryProps } from "../helpers/data"
+import { GalleryProps } from "../helpers/interfaces"
 import { IconButton, Tooltip } from "@mui/material"
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
 import FavoriteIcon from "@mui/icons-material/Favorite"
