@@ -1,22 +1,71 @@
 import { Accordion, AccordionDetails, AccordionGroup, AccordionSummary, accordionClasses } from "@mui/joy"
 import { ProfileProps } from "../helpers/data"
 import { vkSVG } from "../helpers/icons"
-import { Typography } from "@mui/material"
+import { IconButton, Tooltip, Typography } from "@mui/material"
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
+import FavoriteIcon from "@mui/icons-material/Favorite"
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 
-export default function Profile({ index, filteredArray }: ProfileProps) {
+export default function Profile({ setIndex, handleFavCats, favCats, index, filteredArray }: ProfileProps) {
+  const disableLeftArrow = index < 1
+  const disableRightArrow = index === filteredArray.length - 1
+  const catPosition = (
+    <Typography fontWeight={600} variant="subtitle1">
+      {index + 1} / {filteredArray.length}
+    </Typography>
+  )
+  // * Heart icon declaration and if statement to decide which to render
+  let heartIcon
+  if (favCats.includes(filteredArray[index].img)) {
+    heartIcon = (
+      <div className="fav-icon-profile">
+        <Tooltip title="Убрать из избранного">
+          <IconButton onClick={() => handleFavCats(filteredArray[index].img)}>
+            <FavoriteIcon className="fav-icon" fontSize="large" />
+          </IconButton>
+        </Tooltip>
+      </div>
+    )
+  } else {
+    heartIcon = (
+      <div className="fav-icon-profile">
+        <Tooltip title="Добавить в избранное">
+          <IconButton onClick={() => handleFavCats(filteredArray[index].img)}>
+            <FavoriteBorderIcon className="def-icon" fontSize="large" />
+          </IconButton>
+        </Tooltip>
+      </div>
+    )
+  }
+
   let displayedProfile
   if (filteredArray[0].category === "S") {
     displayedProfile = (
       <>
         <div className="cat-profile">
+          <div className="arrow-left">
+            <IconButton disabled={disableLeftArrow} onClick={() => setIndex(index - 1)} color="secondary" variant="outlined">
+              <ArrowBackIosIcon />
+            </IconButton>
+          </div>
+          <div className="arrow-right">
+            <IconButton disabled={disableRightArrow} onClick={() => setIndex(index + 1)} color="secondary" variant="outlined">
+              <ArrowForwardIosIcon />
+            </IconButton>
+          </div>
+
+          {heartIcon}
           <div className="flex-profile">
             <img className="profile-picture" src={`/images/searching/${filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
             <div>
               <a target="_blank" href={filteredArray[index].vk}>
-                <h2 className="cat-name">
-                  {filteredArray[index].name}
-                  {vkSVG}
-                </h2>
+                <Tooltip title="Больше фото в группе ВКонтакте по ссылке!">
+                  <h2 className="cat-name">
+                    {filteredArray[index].name}
+                    {vkSVG}
+                  </h2>
+                </Tooltip>
               </a>
 
               <div className="cat-facts">
@@ -96,6 +145,7 @@ export default function Profile({ index, filteredArray }: ProfileProps) {
               </AccordionDetails>
             </Accordion>
           </AccordionGroup>
+          <div className="flex-column-center mt-20">{catPosition}</div>
         </div>
       </>
     )

@@ -7,11 +7,16 @@ export interface ToggleSearchProps {
   input: string // Include this if input is also a prop
   setIndex: React.Dispatch<React.SetStateAction<number>>
   setInput: React.Dispatch<React.SetStateAction<string>>
+  setFilterOptions: React.Dispatch<React.SetStateAction<FilterOptions>>
+  setToggles: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 export interface ProfileProps {
   filteredArray: CatsInterface[] // Define the type here
   index: number
+  favCats: string[]
+  handleFavCats: (catImgName: string) => void
+  setIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
 export interface FilterOptions {
@@ -23,12 +28,19 @@ export interface FilterOptions {
 export interface FilterProps {
   filterOptions: FilterOptions
   setFilterOptions: React.Dispatch<React.SetStateAction<FilterOptions>>
+  favCats: string[]
+  setIndex: React.Dispatch<React.SetStateAction<number>>
+  toggles: string[]
+  setToggles: React.Dispatch<React.SetStateAction<string[]>>
+  filteredArray: CatsInterface[]
 }
 
-export interface GalleryProps {
+export type GalleryProps = {
   filteredArray: CatsInterface[] // Define the type here
   setIndex: React.Dispatch<React.SetStateAction<number>>
   index: number
+  favCats: string[]
+  handleFavCats: (catImgName: string) => void
 }
 
 export interface CatsInterface {

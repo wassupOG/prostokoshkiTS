@@ -23,11 +23,39 @@ body {
 
 .cat-profile {
   position: relative;
-  padding: 20px;
+  padding: 20px 50px 20px 50px;
   border-radius: 15px;
   margin-bottom: 10px;
   background-color: #242526;
-  min-height: 325px;
+  min-height: 375px;
+}
+
+.arrow-left {
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+}
+.arrow-left:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cat-position {
+  position: absolute;
+  bottom: 8px;
+  right: 50%;
+}
+
+.arrow-right {
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+}
+.arrow-right:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .cat-facts {
@@ -59,7 +87,7 @@ body {
 
 .fav-icon-profile {
   z-index: 1;
-  opacity: 0.8;
+  opacity: 0.9;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -71,18 +99,22 @@ body {
 
 .fav-icon-gallery {
   z-index: 1;
-  opacity: 0.8;
+  opacity: 0.9;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 5px;
+  right: 5px;
 }
 .fav-icon-gallery:hover {
   opacity: 1;
   cursor: pointer;
 }
 
-.favourite {
-  color: red;
+.def-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fav-icon {
+  color: #e93fff;
 }
 
 .galleryImage-container {
@@ -273,6 +305,9 @@ a:hover {
 }
 
 @media all and (max-width: 700px) {
+  .cat-profile {
+    min-height: 575px;
+  }
   .flex-profile {
     flex-direction: column;
   }
@@ -282,6 +317,12 @@ a:hover {
   .flex-profile img {
     margin: 0px;
     align-self: center;
+  }
+  .arrow-left {
+    top: 30%;
+  }
+  .arrow-right {
+    top: 30%;
   }
 }
 @media all and (max-width: 480px) {
@@ -323,6 +364,12 @@ a:hover {
     height: 37px;
     width: 37px;
   }
+  .arrow-left {
+    top: 25%;
+  }
+  .arrow-right {
+    top: 25%;
+  }
   .main-container {
     padding: 20px 15px 150px 15px;
   }
@@ -348,6 +395,7 @@ a:hover {
   }
   .cat-profile {
     background-color: transparent;
-    padding: 0px 0px 10px 0px;
+    padding: 0px;
+    min-height: 515px;
   }
 }/*# sourceMappingURL=styles.css.map */

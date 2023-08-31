@@ -3,21 +3,24 @@ import React from "react"
 import { CustomToggleButton } from "../helpers/styling"
 import { FilterOptions, FilterProps } from "../helpers/data"
 
-export default function Filters({ setFilterOptions, filterOptions }: FilterProps) {
-  const [devices, setDevices] = React.useState(() => [])
-  function handleDevices(_event: React.MouseEvent<HTMLElement>, newDevices: string[]) {
+export default function Filters({ toggles, setToggles, setIndex, filteredArray, setFilterOptions, filterOptions }: FilterProps) {
+  let disableFav = false
+  if (filteredArray[0].category === "H" || !filteredArray.length) {
+    disableFav = true
+  }
+  function handleDevices(_event: React.MouseEvent<HTMLElement>, newToggles: string[]): void {
     const changedKeys: string[] = []
 
-    // Identify which keys to change based on entered and exited devices
-    devices.forEach((device) => {
-      if (!newDevices.includes(device)) {
-        changedKeys.push(device)
+    // Identify which keys to change based on entered and exited toggles
+    toggles.forEach((toggle) => {
+      if (!newToggles.includes(toggle)) {
+        changedKeys.push(toggle)
       }
     })
 
-    newDevices.forEach((device) => {
-      if (!devices.includes(device)) {
-        changedKeys.push(device)
+    newToggles.forEach((toggle) => {
+      if (!toggles.includes(toggle)) {
+        changedKeys.push(toggle)
       }
     })
 
@@ -28,13 +31,14 @@ export default function Filters({ setFilterOptions, filterOptions }: FilterProps
     })
 
     // Update states
-    setDevices(newDevices)
+    setIndex(0)
+    setToggles(newToggles)
     setFilterOptions(updatedFilterOptions)
   }
 
   return (
-    <ToggleButtonGroup value={devices} color="secondary" onChange={handleDevices} aria-label="device">
-      <CustomToggleButton disabled={true} value="favOnly">
+    <ToggleButtonGroup value={toggles} color="secondary" onChange={handleDevices} aria-label="device">
+      <CustomToggleButton disabled={disableFav} value="favOnly">
         Избранное
       </CustomToggleButton>
       <CustomToggleButton value="male">Мальчик</CustomToggleButton>
