@@ -3,9 +3,9 @@ import React from "react"
 import { CustomToggleButton } from "../helpers/styling"
 import { FilterOptions, FilterProps } from "../helpers/data"
 
-export default function Filters({ toggles, setToggles, setIndex, filteredArray, setFilterOptions, filterOptions }: FilterProps) {
+export default function Filters({ toggles, favCats, setToggles, setIndex, setFilterOptions, filterOptions }: FilterProps) {
   let disableFav = false
-  if (filteredArray[0].category === "H" || !filteredArray.length) {
+  if (!favCats.length) {
     disableFav = true
   }
   function handleDevices(_event: React.MouseEvent<HTMLElement>, newToggles: string[]): void {

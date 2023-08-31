@@ -32,7 +32,6 @@ export interface FilterProps {
   setIndex: React.Dispatch<React.SetStateAction<number>>
   toggles: string[]
   setToggles: React.Dispatch<React.SetStateAction<string[]>>
-  filteredArray: CatsInterface[]
 }
 
 export type GalleryProps = {
