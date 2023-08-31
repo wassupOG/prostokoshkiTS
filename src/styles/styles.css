@@ -1,0 +1,353 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #111212;
+  color: rgba(255, 255, 255, 0.9019607843);
+}
+
+.not-found-img {
+  border-radius: 20px;
+  max-width: 70%;
+}
+
+.cat-profile {
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #242526;
+  min-height: 325px;
+}
+
+.cat-facts {
+  margin: 10px 0px 10px 0px;
+  padding-left: 15px;
+  border-left: 2px solid #666;
+  margin-bottom: 10px;
+}
+
+.gallery-picture {
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  width: 150px;
+  transition: transform 0.1s ease-in-out;
+}
+.gallery-picture:hover {
+  cursor: pointer;
+  transform: scale(1.015);
+  box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.52);
+}
+
+.active-cat {
+  box-shadow: 0px 0px 15px 3px #f080ff !important;
+}
+
+.fav-icon-profile {
+  z-index: 1;
+  opacity: 0.8;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.fav-icon-profile:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.fav-icon-gallery {
+  z-index: 1;
+  opacity: 0.8;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.fav-icon-gallery:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.favourite {
+  color: red;
+}
+
+.galleryImage-container {
+  position: relative;
+}
+.galleryImage-container .cat-name-capture {
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  color: rgba(255, 255, 255, 0.9019607843);
+  border-bottom: 1px solid transparent;
+}
+.galleryImage-container .cat-name-capture:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #666;
+}
+.galleryImage-container:hover .fav-icon-gallery {
+  transition: transform 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+
+nav {
+  width: 70px;
+  position: fixed;
+  left: 0; /* Position the navbar at the left side of the page */
+  z-index: 100;
+  height: 100%; /* Set the height to fill the entire viewport */
+  font-size: large;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Change to column direction for vertical layout */
+  align-items: center; /* Align items to the start (top) of the navbar */
+  justify-content: flex-start; /* Center the items vertically */
+  background-color: #111212;
+  border-right: 1px solid #666;
+}
+nav .svg-icon {
+  color: rgb(187, 187, 187);
+}
+nav .svg-icon:hover {
+  color: rgb(231, 231, 231);
+  border: none;
+}
+nav .logo-link {
+  opacity: 0.8;
+  margin: 0px;
+  padding: 0px;
+}
+nav .logo-link:hover {
+  opacity: 1;
+  border-bottom: none;
+}
+nav a {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border-bottom: none;
+}
+nav .logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: block;
+}
+nav .logo:hover {
+  cursor: pointer;
+}
+nav a:first-of-type {
+  margin-top: 30px;
+}
+nav a:hover {
+  border-bottom: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.main-container {
+  margin: auto;
+  max-width: 100ch;
+  padding: 30px 20px 100px 90px;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-divider {
+  padding-top: 25px;
+  margin-top: 5px;
+  border-top: 2px solid #666;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.flex-profile {
+  display: flex;
+  flex-direction: row;
+}
+.flex-profile img {
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  width: 200px;
+  margin-right: 15px;
+}
+
+.cats-gallery-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.big-svg {
+  height: 40px;
+  width: 40px;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.accordion-link {
+  color: #2b97c1;
+  text-decoration: none;
+  font-weight: bold;
+}
+.accordion-link:hover {
+  color: #819aff;
+}
+
+.cat-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cat-body {
+  margin: 10px 0px 10px 0px;
+}
+
+.get-home-link {
+  color: #f6b3ff;
+  font-weight: bold;
+}
+.get-home-link:hover {
+  cursor: pointer;
+  color: #9d69a4;
+}
+
+@media all and (max-width: 700px) {
+  .flex-profile {
+    flex-direction: column;
+  }
+  .flex-profile .cat-name {
+    justify-content: center;
+  }
+  .flex-profile img {
+    margin: 0px;
+    align-self: center;
+  }
+}
+@media all and (max-width: 480px) {
+  nav {
+    flex-direction: row;
+    background: #111212;
+    overflow: hidden;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: none;
+    border-top: 1px solid #666;
+    height: 60px;
+    gap: 10px;
+  }
+  nav .logo-link {
+    opacity: 0.8;
+    margin: 0px;
+    padding: 0px;
+  }
+  nav .logo-link:hover {
+    opacity: 1;
+    border-bottom: none;
+  }
+  nav a {
+    margin: 0px;
+  }
+  nav a:first-of-type {
+    margin: 0px;
+  }
+  nav .logo {
+    height: 37px;
+    width: 37px;
+  }
+  .main-container {
+    padding: 20px 15px 150px 15px;
+  }
+  .cat-facts {
+    margin: 10px 0px 10px 0px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+  .flex-profile {
+    display: flex;
+  }
+  .flex-profile .cat-name {
+    justify-content: center;
+  }
+  .flex-profile img {
+    height: 170px;
+    width: 170px;
+    margin-right: 10px;
+  }
+  .fav-icon-profile {
+    top: 0px;
+    right: 10px;
+  }
+  .cat-profile {
+    background-color: transparent;
+    padding: 0px 0px 10px 0px;
+  }
+}/*# sourceMappingURL=styles.css.map */
