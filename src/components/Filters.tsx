@@ -4,19 +4,19 @@ import { CustomToggleButton } from "../helpers/styling"
 import { FilterOptions, FilterProps } from "../helpers/interfaces"
 
 export default function Filters({ toggles, favCats, setToggles, setIndex, setFilterOptions, filterOptions }: FilterProps) {
-  const disableFav = !favCats.length ? true : false
+  const disableFav = favCats.length === 0
 
-  function handleFilters(_event: React.MouseEvent<HTMLElement>, newToggles: never[]): void {
+  function handleFilters(_event: React.MouseEvent<HTMLElement>, newToggles: string[]): void {
     let changedKey: string = ""
     // * If a toggle from newToggles isn't in incoming toggles this key has to be changed to true since it has been added
-    newToggles.forEach((newToggle: never) => {
+    newToggles.forEach((newToggle: string) => {
       if (!toggles.includes(newToggle)) {
         changedKey = newToggle
       }
     })
 
     // * If a toggle from toggles isn't in newToggles - this key has to be changed to false since it has been removed
-    toggles.forEach((incomingToggle) => {
+    toggles.forEach((incomingToggle: string) => {
       if (!newToggles.includes(incomingToggle)) {
         changedKey = incomingToggle
       }

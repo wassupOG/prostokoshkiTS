@@ -8,7 +8,7 @@ export default function ToggleSearch({ setToggles, setFilterOptions, setInput, s
   const [catsType, setCatsType] = React.useState(true)
   const [galleryType, setGalleryType] = React.useState("Ищут")
 
-  function handleChange(_event: React.SyntheticEvent<Element, Event>, newValue: string) {
+  function handleGalleryToggle(_event: React.SyntheticEvent<Element, Event>, newValue: string) {
     setFilterOptions({
       favOnly: false,
       male: false,
@@ -24,7 +24,7 @@ export default function ToggleSearch({ setToggles, setFilterOptions, setInput, s
 
   return (
     <div className="flex-row mt-10 mb-10">
-      <Tabs value={galleryType} onChange={handleChange} textColor="secondary" indicatorColor="secondary" aria-label="secondary tabs example">
+      <Tabs value={galleryType} onChange={handleGalleryToggle} textColor="secondary" indicatorColor="secondary" aria-label="secondary tabs example">
         <CustomTabButton value="Ищут" label="Ищут дом" />
         <CustomTabButton value="Дома" label="Дома" />
       </Tabs>

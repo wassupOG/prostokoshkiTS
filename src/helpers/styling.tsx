@@ -16,7 +16,7 @@ export const CustomForwardBack = styled(Button)(({ theme }) => ({
 }))
 
 export const CustomInput = styled(Input)(() => ({
-  maxWidth: "150px",
+  maxWidth: "130px",
   backgroundColor: "#111212",
   color: "#ffffffe6",
   borderColor: "#666",

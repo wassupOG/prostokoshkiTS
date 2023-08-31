@@ -1,14 +1,13 @@
-// * M - male, F - female, B - both (for two & more cats like Motya & Yana)
-type CatGender = "M" | "F" | "MF"
+type InputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => void
 
 export interface ToggleSearchProps {
   setDisplayedArrayType: React.Dispatch<React.SetStateAction<CatsInterface[]>>
-  handleInput: (e: React.ChangeEvent<HTMLInputElement>) => void // Include this if handleInput is also a prop
-  input: string // Include this if input is also a prop
+  handleInput: InputChangeHandler
+  input: string
   setIndex: React.Dispatch<React.SetStateAction<number>>
   setInput: React.Dispatch<React.SetStateAction<string>>
   setFilterOptions: React.Dispatch<React.SetStateAction<FilterOptions>>
-  setToggles: React.Dispatch<React.SetStateAction<never[]>>
+  setToggles: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 export interface FilterProps {
@@ -16,12 +15,12 @@ export interface FilterProps {
   setFilterOptions: React.Dispatch<React.SetStateAction<FilterOptions>>
   favCats: string[]
   setIndex: React.Dispatch<React.SetStateAction<number>>
-  toggles: never[]
-  setToggles: React.Dispatch<React.SetStateAction<never[]>>
+  toggles: string[]
+  setToggles: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 export interface ProfileProps {
-  filteredArray: CatsInterface[] // Define the type here
+  filteredArray: CatsInterface[]
   index: number
   favCats: string[]
   handleFavCats: (catImgName: string) => void
@@ -36,12 +35,15 @@ export interface FilterOptions {
 }
 
 export type GalleryProps = {
-  filteredArray: CatsInterface[] // Define the type here
+  filteredArray: CatsInterface[]
   setIndex: React.Dispatch<React.SetStateAction<number>>
   index: number
   favCats: string[]
   handleFavCats: (catImgName: string) => void
 }
+
+// * M - male, F - female, MF - both (for two & more cats like Motya & Yana)
+type CatGender = "M" | "F" | "MF"
 
 export interface CatsInterface {
   category: "S" | "H"
