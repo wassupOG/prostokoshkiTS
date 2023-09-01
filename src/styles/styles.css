@@ -33,10 +33,21 @@ body {
 .arrow-left {
   opacity: 0.9;
   position: absolute;
-  top: 50%;
+  top: 135px;
   left: 8px;
 }
 .arrow-left:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.arrow-right {
+  opacity: 0.9;
+  position: absolute;
+  top: 135px;
+  right: 5px;
+}
+.arrow-right:hover {
   opacity: 1;
   cursor: pointer;
 }
@@ -48,22 +59,31 @@ body {
   font-weight: bold;
 }
 
-.arrow-right {
-  opacity: 0.9;
-  position: absolute;
-  top: 50%;
-  right: 5px;
-}
-.arrow-right:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
 .cat-facts {
   margin: 10px 0px 10px 0px;
   padding-left: 15px;
   border-left: 2px solid #666;
   margin-bottom: 10px;
+}
+
+.fav-icon-profile {
+  z-index: 1;
+  opacity: 0.9;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.fav-icon-profile:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.def-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fav-icon {
+  color: #e93fff;
 }
 
 .gallery-picture {
@@ -86,18 +106,6 @@ body {
   box-shadow: 0px 0px 15px 3px #f080ff !important;
 }
 
-.fav-icon-profile {
-  z-index: 1;
-  opacity: 0.9;
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
-.fav-icon-profile:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
 .fav-icon-gallery {
   z-index: 1;
   opacity: 0.9;
@@ -108,14 +116,6 @@ body {
 .fav-icon-gallery:hover {
   opacity: 1;
   cursor: pointer;
-}
-
-.def-icon {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.fav-icon {
-  color: #e93fff;
 }
 
 .galleryImage-container {
@@ -287,7 +287,7 @@ a:hover {
 }
 
 .cat-name {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
 }
@@ -312,18 +312,13 @@ a:hover {
   .flex-profile {
     flex-direction: column;
   }
-  .flex-profile .cat-name {
-    justify-content: center;
-  }
   .flex-profile img {
     margin: 0px;
     align-self: center;
   }
-  .arrow-left {
-    top: 30%;
-  }
+  .arrow-left,
   .arrow-right {
-    top: 30%;
+    top: 150px;
   }
 }
 @media all and (max-width: 480px) {
@@ -365,11 +360,9 @@ a:hover {
     height: 37px;
     width: 37px;
   }
-  .arrow-left {
-    top: 25%;
-  }
+  .arrow-left,
   .arrow-right {
-    top: 25%;
+    top: 95px;
   }
   .main-container {
     padding: 20px 15px 150px 15px;
@@ -381,9 +374,6 @@ a:hover {
   }
   .flex-profile {
     display: flex;
-  }
-  .flex-profile .cat-name {
-    justify-content: center;
   }
   .flex-profile img {
     height: 170px;
@@ -400,7 +390,7 @@ a:hover {
     min-height: 460px;
   }
   .cat-position {
-    top: 0px;
-    left: 0px;
+    top: 10px;
+    left: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -56,8 +56,14 @@ body {
 }
 .arrow-left {
   @include arrows();
-  top: 50%;
+  top: 135px;
   left: 8px;
+}
+
+.arrow-right {
+  @include arrows();
+  top: 135px;
+  right: 5px;
 }
 
 .cat-position {
@@ -67,18 +73,38 @@ body {
   font-weight: bold;
 }
 
-.arrow-right {
-  @include arrows();
-  top: 50%;
-  right: 5px;
-}
-
 .cat-facts {
   margin: 10px 0px 10px 0px;
   padding-left: 15px;
   border-left: 2px solid $darktheme-fact-border-color;
   margin-bottom: 10px;
 }
+
+@mixin fav-icon {
+  z-index: 1;
+  opacity: 0.9;
+  position: absolute;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.fav-icon-profile {
+  @include fav-icon();
+  top: 5px;
+  right: 15px;
+}
+
+.def-icon {
+  color: $darktheme-link-unhovered;
+}
+
+.fav-icon {
+  color: $fav-cat-color;
+}
+
 // CAT-PROFILE END
 
 // CAT-GALLERY START
@@ -102,35 +128,10 @@ body {
   box-shadow: 0px 0px 15px 3px $darktheme-brand !important;
 }
 
-@mixin fav-icon {
-  z-index: 1;
-  opacity: 0.9;
-  position: absolute;
-
-  &:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
-}
-
-.fav-icon-profile {
-  @include fav-icon();
-  top: 10px;
-  right: 15px;
-}
-
 .fav-icon-gallery {
   @include fav-icon();
   top: 5px;
   right: 5px;
-}
-
-.def-icon {
-  color: $darktheme-link-unhovered;
-}
-
-.fav-icon {
-  color: $fav-cat-color;
 }
 
 .galleryImage-container {
@@ -317,7 +318,7 @@ a {
 }
 
 .cat-name {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
 }
@@ -344,22 +345,15 @@ a {
   .flex-profile {
     flex-direction: column;
 
-    .cat-name {
-      justify-content: center;
-    }
-
     img {
       margin: 0px;
       align-self: center;
     }
   }
 
-  .arrow-left {
-    top: 30%;
-  }
-
+  .arrow-left,
   .arrow-right {
-    top: 30%;
+    top: 150px;
   }
 }
 
@@ -406,12 +400,9 @@ a {
     }
   }
 
-  .arrow-left {
-    top: 25%;
-  }
-
+  .arrow-left,
   .arrow-right {
-    top: 25%;
+    top: 95px;
   }
 
   .main-container {
@@ -426,10 +417,6 @@ a {
 
   .flex-profile {
     display: flex;
-
-    .cat-name {
-      justify-content: center;
-    }
 
     img {
       height: 170px;
@@ -450,7 +437,7 @@ a {
   }
 
   .cat-position {
-    top: 0px;
-    left: 0px;
+    top: 10px;
+    left: 10px;
   }
 }
