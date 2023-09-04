@@ -3,6 +3,7 @@ $element-purple: #aaaaaa;
 // DARK-THEME START
 $elevation-1: #1e1f20;
 $elevation-2: #242526;
+$elevation-3: #38393a;
 $nav-background: #111212;
 $darktheme-body-background: #111212;
 $darktheme-font-main-color: #ffffffe6;
@@ -39,7 +40,7 @@ body {
 // CAT-PROFILE START
 .cat-profile {
   position: relative;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 60px 20px 60px;
   border-radius: 15px;
   margin-bottom: 10px;
   background-color: $elevation-2;
@@ -68,9 +69,13 @@ body {
 
 .cat-position {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 0px;
+  left: 0px;
   font-weight: bold;
+  border: 1px solid $darktheme-brand;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .cat-facts {
@@ -93,8 +98,8 @@ body {
 
 .fav-icon-profile {
   @include fav-icon();
-  top: 5px;
-  right: 15px;
+  top: 2px;
+  right: 10px;
 }
 
 .def-icon {
@@ -437,7 +442,6 @@ a {
   }
 
   .cat-position {
-    top: 10px;
-    left: 10px;
+    border-radius: 10px;
   }
 }

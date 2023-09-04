@@ -23,7 +23,7 @@ body {
 
 .cat-profile {
   position: relative;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 60px 20px 60px;
   border-radius: 15px;
   margin-bottom: 10px;
   background-color: #242526;
@@ -54,9 +54,13 @@ body {
 
 .cat-position {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 0px;
+  left: 0px;
   font-weight: bold;
+  border: 1px solid #f080ff;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .cat-facts {
@@ -70,8 +74,8 @@ body {
   z-index: 1;
   opacity: 0.9;
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 2px;
+  right: 10px;
 }
 .fav-icon-profile:hover {
   opacity: 1;
@@ -390,7 +394,6 @@ a:hover {
     min-height: 460px;
   }
   .cat-position {
-    top: 10px;
-    left: 10px;
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */
