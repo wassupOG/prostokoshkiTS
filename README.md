@@ -16,4 +16,4 @@ Feel free to download this template & create a similar website for an animal she
 3. **[src\helpers](https://github.com/wassupOG/prostokoshkiTS/tree/main/src/helpers)** - all the utilites like custom styled elements, svg icons, interfaces, and data for my application are stored there.
 4. **[src\styles](https://github.com/wassupOG/prostokoshkiTS/tree/main/src/styles)** - styles (SCSS).
 5. **.htaccess** - htaccess file for routing in production.
-6. **[public](https://github.com/wassupOG/prostokoshkiTS/tree/main/public)https://github.com/wassupOG/prostokoshkiTS/tree/main/public** - images, favicons & other static files.
+6. **[public](https://github.com/wassupOG/prostokoshkiTS/tree/main/public)** - images, favicons & other static files.
