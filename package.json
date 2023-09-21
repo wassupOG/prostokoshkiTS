@@ -13,7 +13,6 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.7",
-    "@mui/joy": "^5.0.0-beta.4",
     "@mui/material": "^5.14.7",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

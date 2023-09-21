@@ -1,8 +1,9 @@
 import { ProfileProps } from "../../helpers/interfaces"
 import { vkSVG } from "../../helpers/icons"
 import { Tooltip, Typography } from "@mui/material"
-import { CatPosition, GetCatHomeAccordion, HeartIconProfile, NavigationArrows } from "./ProfileNavigation"
+import { CatPosition, HeartIconProfile, NavigationArrows, GetCatHomeAccordion } from "./ProfileNavigation"
 import { SearchPageStore } from "../../stores/SearchPageStore"
+import { ProfileLink, CatProfile } from "../../themes/styledComponents"
 
 export default function Profile({ handleFavCats, favCats, filteredArray }: ProfileProps) {
   const { index, setIndex } = SearchPageStore()
@@ -13,7 +14,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
   if (filteredArray[0].category === "S") {
     return (
       <>
-        <div className="cat-profile">
+        <CatProfile elevation={5} className="cat-profile">
           <CatPosition index={index} arrayLength={filteredArray.length} />
           <HeartIconProfile isFavorite={favCats.includes(filteredArray[index].img)} onClick={() => handleFavCats(filteredArray[index].img)} />
 
@@ -27,14 +28,12 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
           <div className="flex-profile">
             <img className="profile-picture" src={`/images/searching/${filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
             <div>
-              <a target="_blank" href={filteredArray[index].vk}>
-                <Tooltip title="Больше фото в группе ВКонтакте по ссылке!">
-                  <h2 className="cat-name">
-                    {filteredArray[index].name}
-                    {vkSVG}
-                  </h2>
-                </Tooltip>
-              </a>
+              <Tooltip title="Больше фото в группе ВКонтакте по ссылке!">
+                <ProfileLink target="_blank" href={filteredArray[index].vk}>
+                  {filteredArray[index].name}
+                  {vkSVG}
+                </ProfileLink>
+              </Tooltip>
 
               <div className="cat-facts">
                 <Typography variant="subtitle1">
@@ -52,7 +51,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
           </div>
 
           <GetCatHomeAccordion />
-        </div>
+        </CatProfile>
       </>
     )
   } else {

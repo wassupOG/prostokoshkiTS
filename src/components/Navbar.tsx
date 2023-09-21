@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
 import { helpIcon, instSVG, vkSVG } from "../helpers/icons"
+import ThemeSwitch from "./ThemeSwitch/ThemeSwitch"
 
 export default function Navbar() {
   return (
     <>
       <nav>
+        <ThemeSwitch />
         <Link className="logo-link" to="/">
           <img className="logo" src="/images/logos/logo100px.jpg" alt="Логотип" />
         </Link>

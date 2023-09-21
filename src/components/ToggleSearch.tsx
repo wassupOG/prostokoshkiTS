@@ -12,7 +12,7 @@ export default function ToggleSearch() {
   const [catsType, setCatsType] = React.useState(true)
   const [galleryType, setGalleryType] = React.useState("Ищут")
 
-  function handleInput(e: ChangeEvent<HTMLInputElement>): void {
+  function handleInput(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
     setIndex(0)
     setInput(e.target.value)
   }
@@ -37,7 +37,7 @@ export default function ToggleSearch() {
         <CustomTabButton value="Ищут" label="Ищут дом" />
         <CustomTabButton value="Дома" label="Дома" />
       </Tabs>
-      <CustomInput autoComplete="off" value={input} onChange={(e) => handleInput(e)} placeholder="Поиск..." variant="outlined" size="lg" />
+      <CustomInput autoComplete="off" value={input} onChange={(e) => handleInput(e)} placeholder="Поиск..." variant="outlined" />
     </div>
   )
 }
