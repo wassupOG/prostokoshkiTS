@@ -1,12 +1,21 @@
+import { ChangeEvent } from "react"
 import { Tabs } from "@mui/material"
 import { HomeCats, SearchingCats } from "../helpers/data"
 import * as React from "react"
 import { CustomInput, CustomTabButton } from "../helpers/styling"
-import { ToggleSearchProps } from "../helpers/interfaces"
+import { SearchPageStore } from "../stores/SearchPageStore"
 
-export default function ToggleSearch({ setToggles, setFilterOptions, setInput, setDisplayedArrayType, handleInput, setIndex, input }: ToggleSearchProps) {
+export default function ToggleSearch() {
+  // ! Zustand
+  const { setToggles, setIndex, input, setInput, setFilterOptions, setDisplayedArrayType } = SearchPageStore()
+
   const [catsType, setCatsType] = React.useState(true)
   const [galleryType, setGalleryType] = React.useState("Ищут")
+
+  function handleInput(e: ChangeEvent<HTMLInputElement>): void {
+    setIndex(0)
+    setInput(e.target.value)
+  }
 
   function handleGalleryToggle(_event: React.SyntheticEvent<Element, Event>, newValue: string) {
     setFilterOptions({

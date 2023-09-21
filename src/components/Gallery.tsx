@@ -2,8 +2,10 @@ import { IconButton, Tooltip } from "@mui/material"
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import { GalleryProps } from "../helpers/interfaces"
+import { SearchPageStore } from "../stores/SearchPageStore"
 
-export default function Gallery({ handleFavCats, favCats, filteredArray, setIndex, index }: GalleryProps) {
+export default function Gallery({ handleFavCats, favCats, filteredArray }: GalleryProps) {
+  const { index, setIndex } = SearchPageStore()
   return (
     <div className="cats-gallery-flex-row line-divider">
       {filteredArray.map((cat, catIndex) => (

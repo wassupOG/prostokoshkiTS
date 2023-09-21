@@ -2,10 +2,11 @@ import { ToggleButtonGroup } from "@mui/material"
 import React from "react"
 import { CustomToggleButton } from "../helpers/styling"
 import { FilterOptions, FilterProps } from "../helpers/interfaces"
+import { SearchPageStore } from "../stores/SearchPageStore"
 
-export default function Filters({ toggles, favCats, setToggles, setIndex, setFilterOptions, filterOptions }: FilterProps) {
+export default function Filters({ favCats }: FilterProps) {
+  const { toggles, setToggles, setIndex, filterOptions, setFilterOptions } = SearchPageStore()
   const disableFav = favCats.length === 0
-
   function handleFilters(_event: React.MouseEvent<HTMLElement>, newToggles: string[]): void {
     let changedKey: string = ""
     // * If a toggle from newToggles isn't in incoming toggles this key has to be changed to true since it has been added

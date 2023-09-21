@@ -2,8 +2,10 @@ import { ProfileProps } from "../../helpers/interfaces"
 import { vkSVG } from "../../helpers/icons"
 import { Tooltip, Typography } from "@mui/material"
 import { CatPosition, GetCatHomeAccordion, HeartIconProfile, NavigationArrows } from "./ProfileNavigation"
+import { SearchPageStore } from "../../stores/SearchPageStore"
 
-export default function Profile({ setIndex, handleFavCats, favCats, index, filteredArray }: ProfileProps) {
+export default function Profile({ handleFavCats, favCats, filteredArray }: ProfileProps) {
+  const { index, setIndex } = SearchPageStore()
   const disableLeftArrow = index < 1
   const disableRightArrow = index === filteredArray.length - 1
 
