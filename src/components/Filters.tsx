@@ -1,6 +1,5 @@
-import { ToggleButtonGroup } from "@mui/material"
+import { ToggleButton, ToggleButtonGroup } from "@mui/material"
 import React from "react"
-import { CustomToggleButton } from "../helpers/styling"
 import { FilterOptions, FilterProps } from "../helpers/interfaces"
 import { SearchPageStore } from "../stores/SearchPageStore"
 
@@ -35,11 +34,11 @@ export default function Filters({ favCats }: FilterProps) {
 
   return (
     <ToggleButtonGroup value={toggles} color="secondary" onChange={handleFilters} aria-label="device">
-      <CustomToggleButton disabled={disableFav} value="favOnly">
+      <ToggleButton disabled={disableFav} value="favOnly">
         Избранное
-      </CustomToggleButton>
-      <CustomToggleButton value="male">Мальчик</CustomToggleButton>
-      <CustomToggleButton value="female">Девочка</CustomToggleButton>
+      </ToggleButton>
+      <ToggleButton value="male">Мальчик</ToggleButton>
+      <ToggleButton value="female">Девочка</ToggleButton>
     </ToggleButtonGroup>
   )
 }

@@ -53,10 +53,7 @@ $fav-cat-color: #e93fff;
   top: 0px;
   left: 0px;
   font-weight: bold;
-  border: 1px solid $darktheme-brand;
   padding: 10px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 .cat-facts {
@@ -162,22 +159,12 @@ nav {
   justify-content: flex-start; /* Center the items vertically */
   border-right: 1px solid $darktheme-fact-border-color;
 
-  .svg-icon {
-    color: rgb(187, 187, 187);
-
-    &:hover {
-      color: rgb(231, 231, 231);
-      border: none;
-    }
-  }
-
   .logo-link {
     opacity: 0.8;
     margin: 0px;
     padding: 0px;
     &:hover {
       opacity: 1;
-      border-bottom: none;
     }
   }
 
@@ -185,31 +172,20 @@ nav {
     display: block;
     font-weight: bold;
     text-align: center;
-    margin-top: 15px;
     text-decoration: none;
     transition: 0.2s ease-in-out;
     border-bottom: none;
   }
 
   .logo {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     display: block;
 
     &:hover {
       cursor: pointer;
     }
-  }
-
-  a:first-of-type {
-    margin-top: 30px;
-  }
-
-  a:hover {
-    border-bottom: 1px solid white;
-    color: white;
-    cursor: pointer;
   }
 }
 
@@ -346,7 +322,6 @@ nav {
     border: none;
     border-top: 1px solid $darktheme-fact-border-color;
     height: 60px;
-    gap: 10px;
 
     .logo-link {
       opacity: 0.8;
@@ -355,14 +330,6 @@ nav {
       &:hover {
         opacity: 1;
         border-bottom: none;
-      }
-    }
-
-    a {
-      margin: 0px;
-
-      &:first-of-type {
-        margin: 0px;
       }
     }
 
@@ -400,9 +367,5 @@ nav {
   .fav-icon-profile {
     top: 0px;
     right: 10px;
-  }
-
-  .cat-position {
-    border-radius: 10px;
   }
 }

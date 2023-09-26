@@ -26,9 +26,7 @@ export function HeartIconProfile({ isFavorite, onClick }: HeartIconProfileProps)
   return (
     <div className="fav-icon-profile">
       <Tooltip title={isFavorite ? "Убрать из избранного" : "Добавить в избранное"}>
-        <IconButton onClick={onClick}>
-          {isFavorite ? <FavoriteIcon className="fav-icon" fontSize="large" /> : <FavoriteBorderIcon className="def-icon" fontSize="large" />}
-        </IconButton>
+        <IconButton onClick={onClick}>{isFavorite ? <FavoriteIcon fontSize="large" /> : <FavoriteBorderIcon fontSize="large" />}</IconButton>
       </Tooltip>
     </div>
   )

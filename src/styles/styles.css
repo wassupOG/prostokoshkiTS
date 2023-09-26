@@ -36,10 +36,7 @@
   top: 0px;
   left: 0px;
   font-weight: bold;
-  border: 1px solid #f080ff;
   padding: 10px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 .cat-facts {
@@ -138,13 +135,6 @@ nav {
   justify-content: flex-start; /* Center the items vertically */
   border-right: 1px solid #666;
 }
-nav .svg-icon {
-  color: rgb(187, 187, 187);
-}
-nav .svg-icon:hover {
-  color: rgb(231, 231, 231);
-  border: none;
-}
 nav .logo-link {
   opacity: 0.8;
   margin: 0px;
@@ -152,32 +142,22 @@ nav .logo-link {
 }
 nav .logo-link:hover {
   opacity: 1;
-  border-bottom: none;
 }
 nav a {
   display: block;
   font-weight: bold;
   text-align: center;
-  margin-top: 15px;
   text-decoration: none;
   transition: 0.2s ease-in-out;
   border-bottom: none;
 }
 nav .logo {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   display: block;
 }
 nav .logo:hover {
-  cursor: pointer;
-}
-nav a:first-of-type {
-  margin-top: 30px;
-}
-nav a:hover {
-  border-bottom: 1px solid white;
-  color: white;
   cursor: pointer;
 }
 
@@ -310,7 +290,6 @@ nav a:hover {
     border: none;
     border-top: 1px solid #666;
     height: 60px;
-    gap: 10px;
   }
   nav .logo-link {
     opacity: 0.8;
@@ -320,12 +299,6 @@ nav a:hover {
   nav .logo-link:hover {
     opacity: 1;
     border-bottom: none;
-  }
-  nav a {
-    margin: 0px;
-  }
-  nav a:first-of-type {
-    margin: 0px;
   }
   nav .logo {
     height: 37px;
@@ -354,8 +327,5 @@ nav a:hover {
   .fav-icon-profile {
     top: 0px;
     right: 10px;
-  }
-  .cat-position {
-    border-radius: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */

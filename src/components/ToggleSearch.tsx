@@ -1,9 +1,9 @@
 import { ChangeEvent } from "react"
-import { Tabs } from "@mui/material"
+import { Tab, Tabs } from "@mui/material"
 import { HomeCats, SearchingCats } from "../helpers/data"
 import * as React from "react"
-import { CustomInput, CustomTabButton } from "../helpers/styling"
 import { SearchPageStore } from "../stores/SearchPageStore"
+import { CustomInput } from "../themes/styledComponents"
 
 export default function ToggleSearch() {
   // ! Zustand
@@ -34,8 +34,8 @@ export default function ToggleSearch() {
   return (
     <div className="flex-row mt-10 mb-10">
       <Tabs value={galleryType} onChange={handleGalleryToggle} textColor="secondary" indicatorColor="secondary" aria-label="secondary tabs example">
-        <CustomTabButton value="Ищут" label="Ищут дом" />
-        <CustomTabButton value="Дома" label="Дома" />
+        <Tab value="Ищут" label="Ищут дом" />
+        <Tab value="Дома" label="Дома" />
       </Tabs>
       <CustomInput autoComplete="off" value={input} onChange={(e) => handleInput(e)} placeholder="Поиск..." variant="outlined" />
     </div>

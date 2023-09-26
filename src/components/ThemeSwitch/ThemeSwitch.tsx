@@ -8,7 +8,7 @@ export default function ThemeSwitch() {
   const { currentTheme, toggleTheme } = themeStore()
   return (
     <>
-      <Tooltip title={currentTheme === "light" ? "Switch to dark mode" : "Switch to light mode"} onClick={toggleTheme}>
+      <Tooltip title={currentTheme === "light" ? "Включить темную тему" : "Включить светлую тему"} onClick={toggleTheme}>
         <IconButton>{currentTheme === "light" ? <LightModeIcon /> : <DarkModeIcon />}</IconButton>
       </Tooltip>
     </>

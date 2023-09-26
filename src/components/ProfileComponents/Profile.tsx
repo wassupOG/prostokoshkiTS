@@ -14,7 +14,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
   if (filteredArray[0].category === "S") {
     return (
       <>
-        <CatProfile elevation={5} className="cat-profile">
+        <CatProfile elevation={1} className="cat-profile">
           <CatPosition index={index} arrayLength={filteredArray.length} />
           <HeartIconProfile isFavorite={favCats.includes(filteredArray[index].img)} onClick={() => handleFavCats(filteredArray[index].img)} />
 
@@ -57,7 +57,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
   } else {
     return (
       <>
-        <div className="cat-profile">
+        <CatProfile elevation={5} className="cat-profile">
           <HeartIconProfile isFavorite={favCats.includes(filteredArray[index].img)} onClick={() => handleFavCats(filteredArray[index].img)} />
 
           <NavigationArrows
@@ -78,7 +78,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
           </div>
 
           <CatPosition index={index} arrayLength={filteredArray.length} />
-        </div>
+        </CatProfile>
       </>
     )
   }

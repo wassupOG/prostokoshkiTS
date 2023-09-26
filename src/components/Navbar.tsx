@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom"
-import { helpIcon, instSVG, vkSVG } from "../helpers/icons"
 import ThemeSwitch from "./ThemeSwitch/ThemeSwitch"
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism"
+import PublicIcon from "@mui/icons-material/Public"
+import { IconButton } from "@mui/material"
 
 export default function Navbar() {
   return (
     <>
       <nav>
-        <ThemeSwitch />
-        <Link className="logo-link" to="/">
+        <Link className="logo-link" to="/" aria-label="Главная страица">
           <img className="logo" src="/images/logos/logo100px.jpg" alt="Логотип" />
         </Link>
-        <Link className="svg-icon" to="/help" aria-label="Помощь приюту">
-          {helpIcon}
+        <ThemeSwitch />
+        <Link to="/help" aria-label="Помощь приюту">
+          <IconButton>
+            <VolunteerActivismIcon />
+          </IconButton>
         </Link>
-        <a target="_blank" href="https://vk.com/prosto__koshki" className="svg-icon" aria-label="Наша группа ВКонтакте">
-          {vkSVG}
-        </a>
-        <a target="_blank" href="https://instagram.com/prosto_koshki?igshid=MzRlODBiNWFlZA==" className="svg-icon" aria-label="Наш инстаграм аккаунт">
-          {instSVG}
-        </a>
+        <Link to="/social" aria-label="Наши социальные сети">
+          <IconButton>
+            <PublicIcon />
+          </IconButton>
+        </Link>
       </nav>
     </>
   )

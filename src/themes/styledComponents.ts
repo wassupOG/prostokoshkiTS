@@ -2,6 +2,7 @@ import { styled } from "@mui/material/styles"
 import { Link } from "react-router-dom"
 import LinkMUI from "@mui/material/Link"
 import Paper from "@mui/material/Paper"
+import { TextField } from "@mui/material"
 
 export const NavLink = styled(Link)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -27,4 +28,8 @@ export const ProfileLink = styled(LinkMUI)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   width: "fit-content",
+}))
+
+export const CustomInput = styled(TextField)(({ theme }) => ({
+  maxWidth: "130px",
 }))
