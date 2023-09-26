@@ -15,6 +15,7 @@ interface SearchPageState {
   input: string
   filterOptions: FilterOptions
   displayedArrayType: CatsInterface[]
+  galleryType: string
 }
 
 interface SearchPageActions {
@@ -23,6 +24,7 @@ interface SearchPageActions {
   setInput: (input: string) => void
   setFilterOptions: (filterOptions: FilterOptions) => void
   setDisplayedArrayType: (displayedArrayType: CatsInterface[]) => void
+  setGalleryType: (galleryType: string) => void
 }
 
 // ! Setters under the hood
@@ -48,4 +50,7 @@ export const SearchPageStore = create<SearchPageState & SearchPageActions>((set)
   // * Change cats type
   displayedArrayType: SearchingCats,
   setDisplayedArrayType: (newDisplayedArrayType) => set({ displayedArrayType: newDisplayedArrayType }),
+  // * Gallery Type
+  galleryType: "Ищут",
+  setGalleryType: (newGalleryType) => set({ galleryType: newGalleryType }),
 }))

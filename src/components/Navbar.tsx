@@ -3,15 +3,27 @@ import ThemeSwitch from "./ThemeSwitch/ThemeSwitch"
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism"
 import PublicIcon from "@mui/icons-material/Public"
 import { IconButton } from "@mui/material"
+import PetsIcon from "@mui/icons-material/Pets"
+import HomeIcon from "@mui/icons-material/Home"
+import { CustomNav } from "../themes/styledComponents"
 
 export default function Navbar() {
   return (
     <>
-      <nav>
-        <Link className="logo-link" to="/" aria-label="Главная страица">
+      <CustomNav>
+        <Link className="logo-link" to="/" aria-label="О нас">
           <img className="logo" src="/images/logos/logo100px.jpg" alt="Логотип" />
         </Link>
-        <ThemeSwitch />
+        <Link to="/" aria-label="О нас">
+          <IconButton>
+            <HomeIcon />
+          </IconButton>
+        </Link>
+        <Link to="/search" aria-label="Поиск кошек">
+          <IconButton>
+            <PetsIcon />
+          </IconButton>
+        </Link>
         <Link to="/help" aria-label="Помощь приюту">
           <IconButton>
             <VolunteerActivismIcon />
@@ -22,7 +34,8 @@ export default function Navbar() {
             <PublicIcon />
           </IconButton>
         </Link>
-      </nav>
+        <ThemeSwitch />
+      </CustomNav>
     </>
   )
 }

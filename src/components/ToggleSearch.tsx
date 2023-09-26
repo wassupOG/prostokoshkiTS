@@ -7,17 +7,16 @@ import { CustomInput } from "../themes/styledComponents"
 
 export default function ToggleSearch() {
   // ! Zustand
-  const { setToggles, setIndex, input, setInput, setFilterOptions, setDisplayedArrayType } = SearchPageStore()
+  const { setToggles, setIndex, input, setInput, setFilterOptions, setDisplayedArrayType, galleryType, setGalleryType } = SearchPageStore()
 
   const [catsType, setCatsType] = React.useState(true)
-  const [galleryType, setGalleryType] = React.useState("Ищут")
 
   function handleInput(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
     setIndex(0)
     setInput(e.target.value)
   }
 
-  function handleGalleryToggle(_event: React.SyntheticEvent<Element, Event>, newValue: string) {
+  function handleGalleryToggle(e: React.SyntheticEvent<Element, Event>, newValue: string) {
     setFilterOptions({
       favOnly: false,
       male: false,

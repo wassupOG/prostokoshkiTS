@@ -8,6 +8,7 @@ import { themeStore } from "./components/ThemeSwitch/ThemeSwitchStore"
 import { lightTheme } from "./themes/lightTheme"
 import { darkTheme } from "./themes/darkTheme"
 import Social from "./routes/Social"
+import AboutUs from "./routes/AboutUs"
 
 export default function App() {
   const { currentTheme } = themeStore()
@@ -19,7 +20,8 @@ export default function App() {
         <Navbar />
         <div className="main-container">
           <Routes>
-            <Route path="/" element={<SearchPage />} />
+            <Route path="/" element={<AboutUs />} />
+            <Route path="/search" element={<SearchPage />} />
             <Route path="/help" element={<HowToHelp />} />
             <Route path="/social" element={<Social />} />
             <Route path="*" element={<ErrorPage />} />

@@ -3,21 +3,22 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import { GalleryProps } from "../helpers/interfaces"
 import { SearchPageStore } from "../stores/SearchPageStore"
+import { CatGalleryContainer, CatNameGallery } from "../themes/styledComponents"
 
 export default function Gallery({ handleFavCats, favCats, filteredArray }: GalleryProps) {
   const { index, setIndex } = SearchPageStore()
   return (
     <div className="cats-gallery-flex-row line-divider">
       {filteredArray.map((cat, catIndex) => (
-        <div key={cat.id} onClick={() => setIndex(catIndex)} className="galleryImage-container">
+        <CatGalleryContainer key={cat.id} onClick={() => setIndex(catIndex)}>
           <HeartIconGallery isFavorite={favCats.includes(cat.img)} onClick={() => handleFavCats(filteredArray[catIndex].img)} />
           <img
             className={`gallery-picture ${catIndex === index ? "active-cat" : ""}`}
             src={`${filteredArray[0].category === "S" ? "/images/searching/" : "/images/found_home/"}${cat.img}.jpg`}
             alt={cat.name}
           />
-          <span className="cat-name-capture">{cat.name}</span>
-        </div>
+          <CatNameGallery>{cat.name}</CatNameGallery>
+        </CatGalleryContainer>
       ))}
     </div>
   )
