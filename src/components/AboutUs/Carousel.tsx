@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Box, Button, MobileStepper, Paper, Typography, useTheme } from "@mui/material"
+import { Box, Button, MobileStepper, Paper, Typography } from "@mui/material"
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material"
 import { photoArray } from "../../routes/AboutUs"
 
@@ -16,7 +16,6 @@ export default function Carousel({ array }: CarouselProps) {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1)
   }
-  const theme = useTheme()
   return (
     <>
       <Box>

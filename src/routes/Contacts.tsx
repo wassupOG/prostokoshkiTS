@@ -1,9 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary, Link, Typography } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import { instSVG, vkSVG } from "../helpers/icons"
-import PublicIcon from "@mui/icons-material/Public"
 import { ProfileLink } from "../themes/styledComponents"
-import { Telegram } from "@mui/icons-material"
 
 export default function Social() {
   return (

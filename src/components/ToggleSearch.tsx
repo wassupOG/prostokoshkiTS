@@ -16,7 +16,7 @@ export default function ToggleSearch() {
     setInput(e.target.value)
   }
 
-  function handleGalleryToggle(e: React.SyntheticEvent<Element, Event>, newValue: string) {
+  function handleGalleryToggle(_e: React.SyntheticEvent<Element, Event>, newValue: string) {
     setFilterOptions({
       favOnly: false,
       male: false,
