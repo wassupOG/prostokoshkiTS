@@ -7,4 +7,11 @@ export const lightTheme = createTheme({
       default: "#e7e7e7",
     },
   },
+  components: {
+    MuiAccordion: {
+      defaultProps: {
+        elevation: 5,
+      },
+    },
+  },
 })

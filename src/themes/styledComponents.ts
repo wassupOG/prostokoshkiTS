@@ -1,16 +1,13 @@
 import { styled } from "@mui/material/styles"
-import { Link } from "react-router-dom"
 import LinkMUI from "@mui/material/Link"
 import Paper from "@mui/material/Paper"
 import { TextField, Typography } from "@mui/material"
+import { Link } from "react-router-dom"
 
-export const NavLink = styled(Link)(({ theme }) => ({
-  color: theme.palette.primary.main,
-  fontWeight: "bold",
+export const DrawerLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
-  "&:hover": {
-    color: theme.palette.primary.light,
-  },
+  width: "100%",
+  color: theme.palette.primary.main,
 }))
 
 export const CatProfile = styled(Paper)(({ theme }) => ({
@@ -46,45 +43,32 @@ export const CatGalleryContainer = styled("div")(({ theme }) => ({
   },
 }))
 
-export const CatNameGallery = styled(Typography)(({ theme }) => ({
+export const CatNameGallery = styled(Typography)(() => ({
   position: "absolute",
   width: "max-content",
   left: "50%",
   transform: "translateX(-50%)",
 }))
 
-export const CustomInput = styled(TextField)(({ theme }) => ({
+export const CustomInput = styled(TextField)(() => ({
   maxWidth: "130px",
 }))
 
 export const CustomNav = styled("nav")(({ theme }) => ({
-  width: "70px",
-  position: "fixed",
-  left: 0,
-  zIndex: 100,
-  height: "100%",
-  overflow: "hidden",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
   justifyContent: "flex-start",
-  borderRight: `1px solid ${theme.palette.divider}`,
+  borderBottom: `1px solid ${theme.palette.divider}`,
   backgroundColor: theme.palette.background.default,
 
   [theme.breakpoints.down(480)]: {
-    flexDirection: "row",
-    overflow: "hidden",
-    position: "fixed",
-    top: "auto",
-    bottom: 0,
-    width: "100%",
-    borderBottom: "none",
-    display: "flex",
-    alignItems: "center",
     justifyContent: "center",
-    height: "fit-content",
-    border: "none",
+    height: "50px",
+    bottom: 0,
+    borderBottom: "none",
+    top: "auto",
     borderTop: `1px solid ${theme.palette.divider}`,
-    minHeight: "50px",
+
+    ".logo-link": {
+      display: "none",
+    },
   },
 }))

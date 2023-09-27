@@ -25,8 +25,8 @@ export default function ToggleSearch() {
     setIndex(0)
     setInput("")
     setGalleryType(newValue)
-    catsType ? setDisplayedArrayType(HomeCats) : setDisplayedArrayType(SearchingCats)
     setCatsType(!catsType)
+    catsType ? setDisplayedArrayType(HomeCats) : setDisplayedArrayType(SearchingCats)
     setToggles([])
   }
 
