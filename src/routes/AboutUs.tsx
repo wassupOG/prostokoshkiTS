@@ -1,7 +1,7 @@
-import { Paper, Stack, Typography, useTheme } from "@mui/material"
+import { Paper, Stack, useTheme } from "@mui/material"
 import Carousel from "../components/AboutUs/Carousel"
 import ShelterFacts from "../components/AboutUs/ShelterFacts"
-import FormatQuoteIcon from "@mui/icons-material/FormatQuote"
+import Citation from "../components/AboutUs/Citation"
 
 export interface photoArray {
   label: string
@@ -107,14 +107,7 @@ export default function AboutUs() {
         </Paper>
       </Stack>
 
-      <Paper elevation={3} sx={{ p: 3, borderRadius: 3, mt: 3 }}>
-        <Typography textAlign={"center"} variant="h6">
-          <FormatQuoteIcon />
-          Если у вас есть кошка, вы возвращаетесь не в дом, а домой
-          <FormatQuoteIcon />
-          <div>- Пэм Браун</div>
-        </Typography>
-      </Paper>
+      <Citation />
     </>
   )
 }

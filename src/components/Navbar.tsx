@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ThemeSwitch from "./ThemeSwitch/ThemeSwitch"
+import ThemeSwitch from "./ThemeSwitch"
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism"
 import PetsIcon from "@mui/icons-material/Pets"
 import HomeIcon from "@mui/icons-material/Home"

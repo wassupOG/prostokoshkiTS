@@ -49,16 +49,15 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
             </div>
           </div>
           <GetCatHomeAccordion />
-          <div className="flex-row-center">
-            <CatPosition index={index} arrayLength={filteredArray.length} />
-          </div>
+
+          <CatPosition index={index} arrayLength={filteredArray.length} />
         </CatProfile>
       </>
     )
   } else {
     return (
       <>
-        <CatProfile elevation={2}>
+        <CatProfile elevation={3}>
           <HeartIconProfile isFavorite={favCats.includes(filteredArray[index].img)} onClick={() => handleFavCats(filteredArray[index].img)} />
 
           <NavigationArrows
@@ -78,7 +77,9 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
             </div>
           </div>
 
-          <CatPosition index={index} arrayLength={filteredArray.length} />
+          <div className="flex-row-center">
+            <CatPosition index={index} arrayLength={filteredArray.length} />
+          </div>
         </CatProfile>
       </>
     )

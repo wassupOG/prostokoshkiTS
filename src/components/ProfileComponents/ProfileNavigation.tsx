@@ -50,7 +50,7 @@ export function NavigationArrows({ disableLeftArrow, disableRightArrow, prevCat,
 }
 
 export function CatPosition({ index, arrayLength }: CatPositionProps) {
-  return <div className="cat-position">{`${index + 1} / ${arrayLength}`}</div>
+  return <div className="cat-position flex-row-center">{`${index + 1} / ${arrayLength}`}</div>
 }
 
 export function GetCatHomeAccordion() {
