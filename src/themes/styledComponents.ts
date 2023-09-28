@@ -15,8 +15,14 @@ export const CatProfile = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   paddingLeft: theme.spacing(5),
   paddingRight: theme.spacing(5),
+  paddingBottom: theme.spacing(1),
   minHeight: 330,
   position: "relative",
+
+  [theme.breakpoints.down(480)]: {
+    background: theme.palette.background.default,
+    padding: theme.spacing(1),
+  },
 }))
 
 export const ProfileLink = styled(LinkMUI)(({ theme }) => ({
@@ -30,9 +36,6 @@ export const ProfileLink = styled(LinkMUI)(({ theme }) => ({
 export const CatGalleryContainer = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: "10%",
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
   maxHeight: "150px",
   maxWidth: "150px",
   transition: "transform 0.1s ease-in-out",

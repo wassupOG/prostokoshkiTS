@@ -38,15 +38,12 @@
 }
 
 .cat-position {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-weight: bold;
-  padding: 10px;
+  margin: 10px;
+  margin-top: 15px;
 }
 
 .cat-facts {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 0px 0px;
   padding-left: 15px;
   border-left: 2px solid #666;
   margin-bottom: 10px;
@@ -56,7 +53,7 @@
   z-index: 1;
   opacity: 0.9;
   position: absolute;
-  top: 2px;
+  top: 5px;
   right: 10px;
 }
 .fav-icon-profile:hover {
@@ -82,11 +79,6 @@
   width: 150px;
   transition: transform 0.1s ease-in-out;
 }
-.gallery-picture:hover {
-  cursor: pointer;
-  transform: scale(1.015);
-  box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.52);
-}
 
 .active-cat {
   box-shadow: 0px 0px 15px 3px #f080ff !important;
@@ -102,29 +94,6 @@
 .fav-icon-gallery:hover {
   opacity: 1;
   cursor: pointer;
-}
-
-.galleryImage-container {
-  position: relative;
-}
-.galleryImage-container .cat-name-capture {
-  width: -moz-max-content;
-  width: max-content;
-  position: absolute;
-  font-weight: bold;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -25px;
-  color: rgba(255, 255, 255, 0.9019607843);
-  border-bottom: 1px solid transparent;
-}
-.galleryImage-container .cat-name-capture:hover {
-  cursor: pointer;
-  border-bottom: 1px solid #666;
-}
-.galleryImage-container:hover .fav-icon-gallery {
-  transition: transform 0.1s ease-in-out;
-  transform: scale(1.1);
 }
 
 nav {
@@ -174,7 +143,7 @@ nav {
 .line-divider {
   padding-top: 25px;
   margin-top: 15px;
-  border-top: 2px solid #666;
+  border-top: 1px solid #666;
 }
 
 .flex-row {
@@ -182,6 +151,11 @@ nav {
   flex-direction: row;
   align-items: center;
   gap: 10px;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
 }
 
 .flex-profile {

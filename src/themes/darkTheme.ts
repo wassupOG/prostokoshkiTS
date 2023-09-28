@@ -10,5 +10,15 @@ export const darkTheme = createTheme({
         elevation: 10,
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: ({ theme }) =>
+          theme.unstable_sx({
+            "&:hover": {
+              background: theme.palette.grey[800],
+            },
+          }),
+      },
+    },
   },
 })

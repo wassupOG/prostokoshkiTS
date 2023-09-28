@@ -12,7 +12,7 @@ export default function Social() {
 
       <Accordion sx={{ mt: 2 }}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-          <Typography>🌐 Наши социальные сети</Typography>
+          <Typography>🌐 Социальные сети</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ProfileLink target="_blank" href="https://vk.com/prosto__koshki" className="svg-icon" aria-label="Наша группа ВКонтакте">
@@ -70,24 +70,6 @@ export default function Social() {
               Viber
             </Link>
           </div>
-          <div>
-            <strong>Евгения:</strong>{" "}
-            <Link target="_blank" href="https://vk.com/id13058914">
-              VK
-            </Link>
-            ,{" "}
-            <Link target="_blank" href="https://t.me/+79040620220">
-              Telegram
-            </Link>
-            ,{" "}
-            <Link target="_blank" href="https://wa.me/+79040620220">
-              WhatsApp
-            </Link>
-            ,{" "}
-            <Link target="_blank" href="viber://chat?number=+79040620220">
-              Viber
-            </Link>
-          </div>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -100,9 +82,6 @@ export default function Social() {
           </div>
           <div>
             <strong>Юлия:</strong> +79307008009
-          </div>
-          <div>
-            <strong>Евгения:</strong> +79040620220
           </div>
         </AccordionDetails>
       </Accordion>

@@ -13,5 +13,15 @@ export const lightTheme = createTheme({
         elevation: 5,
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: ({ theme }) =>
+          theme.unstable_sx({
+            "&:hover": {
+              background: theme.palette.grey[300],
+            },
+          }),
+      },
+    },
   },
 })

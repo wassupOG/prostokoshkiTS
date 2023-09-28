@@ -1,4 +1,4 @@
-import { Alert, AlertTitle, Typography } from "@mui/material";
+import { Alert, AlertTitle, Typography } from "@mui/material"
 
 export default function ErrorPage() {
   return (
@@ -13,5 +13,5 @@ export default function ErrorPage() {
         </Typography>
       </Alert>
     </>
-  );
+  )
 }

@@ -36,12 +36,12 @@ export function NavigationArrows({ disableLeftArrow, disableRightArrow, prevCat,
   return (
     <>
       <div className="arrow-left">
-        <IconButton disabled={disableLeftArrow} onClick={prevCat} color="secondary" aria-label="Стрелка назад">
+        <IconButton disabled={disableLeftArrow} onClick={prevCat} color="primary" aria-label="Стрелка назад">
           <ArrowBackIosIcon />
         </IconButton>
       </div>
       <div className="arrow-right">
-        <IconButton disabled={disableRightArrow} onClick={nextCat} color="secondary" aria-label="Стрелка вперед">
+        <IconButton disabled={disableRightArrow} onClick={nextCat} color="primary" aria-label="Стрелка вперед">
           <ArrowForwardIosIcon />
         </IconButton>
       </div>
@@ -98,25 +98,6 @@ export function GetCatHomeAccordion() {
               Viber
             </Link>{" "}
             | +79307008009
-          </div>
-          <div>
-            <strong>Евгения:</strong>{" "}
-            <Link target="_blank" href="https://vk.com/id13058914">
-              VK
-            </Link>
-            ,{" "}
-            <Link target="_blank" href="https://t.me/+79040620220">
-              Telegram
-            </Link>
-            ,{" "}
-            <Link target="_blank" href="https://wa.me/+79040620220">
-              WhatsApp
-            </Link>
-            ,{" "}
-            <Link target="_blank" href="viber://chat?number=+79040620220">
-              Viber
-            </Link>{" "}
-            | +79040620220
           </div>
           <div style={{ marginTop: 8 }}>
             🌟 Больше информации о котиках и нашем приюте вы можете найти{" "}

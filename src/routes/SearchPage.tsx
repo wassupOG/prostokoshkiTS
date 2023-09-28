@@ -9,7 +9,7 @@ import { SearchPageStore } from "../stores/SearchPageStore"
 
 export default function SearchPage() {
   // ! Zustand
-  const { input, filterOptions, displayedArrayType } = SearchPageStore()
+  const { input, filterOptions, displayedGallery } = SearchPageStore()
   // * State management
   const [favCats, setFavCats] = useState<string[]>(() => {
     const storageFavCats = localStorage.getItem("favCats")
@@ -23,7 +23,7 @@ export default function SearchPage() {
   }, [favCats])
 
   // * Filtering logic
-  const filteredArray = displayedArrayType.filter(
+  const filteredArray = displayedGallery.filter(
     (cat) =>
       cat.name.toLowerCase().includes(input.toLowerCase()) &&
       (!filterOptions.favOnly || favCats.includes(cat.img)) &&

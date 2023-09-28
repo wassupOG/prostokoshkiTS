@@ -1,15 +1,14 @@
-import { ChangeEvent } from "react"
+import { ChangeEvent, useState } from "react"
 import { Tab, Tabs } from "@mui/material"
 import { HomeCats, SearchingCats } from "../helpers/data"
-import * as React from "react"
 import { SearchPageStore } from "../stores/SearchPageStore"
 import { CustomInput } from "../themes/styledComponents"
 
 export default function ToggleSearch() {
   // ! Zustand
   const { setToggles, setIndex, input, setInput, setFilterOptions, setDisplayedArrayType, galleryType, setGalleryType } = SearchPageStore()
-
-  const [catsType, setCatsType] = React.useState(true)
+  // * State
+  const [catsType, setCatsType] = useState(galleryType)
 
   function handleInput(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
     setIndex(0)
@@ -25,8 +24,8 @@ export default function ToggleSearch() {
     setIndex(0)
     setInput("")
     setGalleryType(newValue)
-    setCatsType(!catsType)
-    catsType ? setDisplayedArrayType(HomeCats) : setDisplayedArrayType(SearchingCats)
+    setCatsType(catsType === "Ищут" ? "Дома" : "Ищут")
+    catsType === "Ищут" ? setDisplayedArrayType(HomeCats) : setDisplayedArrayType(SearchingCats)
     setToggles([])
   }
 

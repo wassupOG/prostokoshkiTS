@@ -35,13 +35,10 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [windowWidth, setWidth] = useState(window.innerWidth)
   const [drawerState, setDrawerState] = useState(false)
-
+  const [windowWidth, setWidth] = useState(window.innerWidth)
   window.addEventListener("resize", () => setWidth(window.innerWidth))
-  const handleCloseDrawer = () => {
-    setDrawerState(false)
-  }
+  const handleCloseDrawer = () => setDrawerState(false)
 
   if (windowWidth > 680) {
     return (
@@ -94,7 +91,13 @@ export default function Navbar() {
             <List>
               {links.map((link) => {
                 return (
-                  <ListItem key={link.url} disablePadding onClick={() => handleCloseDrawer()}>
+                  <ListItem
+                    key={link.url}
+                    disablePadding
+                    onClick={() => {
+                      handleCloseDrawer()
+                      window.scrollTo(0, 0)
+                    }}>
                     <DrawerLink to={link.url}>
                       <ListItemButton>
                         <ListItemIcon>{link.icon}</ListItemIcon>

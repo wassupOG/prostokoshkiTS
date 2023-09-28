@@ -14,7 +14,7 @@ interface SearchPageState {
   index: number
   input: string
   filterOptions: FilterOptions
-  displayedArrayType: CatsInterface[]
+  displayedGallery: CatsInterface[]
   galleryType: string
 }
 
@@ -48,8 +48,8 @@ export const SearchPageStore = create<SearchPageState & SearchPageActions>((set)
   },
   setFilterOptions: (newFilterOptions) => set({ filterOptions: newFilterOptions }),
   // * Change cats type
-  displayedArrayType: SearchingCats,
-  setDisplayedArrayType: (newDisplayedArrayType) => set({ displayedArrayType: newDisplayedArrayType }),
+  displayedGallery: SearchingCats,
+  setDisplayedArrayType: (newGallery) => set({ displayedGallery: newGallery }),
   // * Gallery Type
   galleryType: "Ищут",
   setGalleryType: (newGalleryType) => set({ galleryType: newGalleryType }),
