@@ -159,6 +159,13 @@ nav {
   justify-content: center;
 }
 
+.flex-column-all-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .flex-profile {
   display: flex;
   flex-direction: row;

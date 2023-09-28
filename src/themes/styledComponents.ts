@@ -25,6 +25,14 @@ export const CatProfile = styled(Paper)(({ theme }) => ({
   },
 }))
 
+export const RouterLink = styled(Link)(({ theme }) => ({
+  fontWeight: 600,
+  color: theme.palette.primary.main,
+  "&:hover": {
+    color: theme.palette.primary.dark,
+  },
+}))
+
 export const ProfileLink = styled(LinkMUI)(({ theme }) => ({
   fontWeight: 600,
   fontSize: theme.typography.pxToRem(20),

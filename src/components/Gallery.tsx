@@ -16,6 +16,7 @@ export default function Gallery({ handleFavCats, favCats, filteredArray }: Galle
             className={`gallery-picture ${catIndex === index ? "active-cat" : ""}`}
             src={`${filteredArray[0].category === "S" ? "/images/searching/" : "/images/found_home/"}${cat.img}.jpg`}
             alt={cat.name}
+            loading="lazy"
           />
           <CatNameGallery>{cat.name}</CatNameGallery>
         </CatGalleryContainer>
