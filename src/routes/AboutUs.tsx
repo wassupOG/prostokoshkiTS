@@ -12,89 +12,97 @@ export interface photoArray {
 const guests: photoArray[] = [
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests0.jpg",
+    path: "/images/about_page/guests/0guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests1.jpg",
+    path: "/images/about_page/guests/1guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests2.jpg",
+    path: "/images/about_page/guests/2guests.jpg",
+  },
+  {
+    label: "Котики в языковой школе 'Мастеркласс'",
+    path: "/images/about_page/guests/9guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests3.jpg",
+    path: "/images/about_page/guests/3guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests4.jpg",
+    path: "/images/about_page/guests/4guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests5.jpg",
+    path: "/images/about_page/guests/5guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests6.jpg",
+    path: "/images/about_page/guests/6guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests7.jpg",
+    path: "/images/about_page/guests/7guests.jpg",
   },
   {
     label: "Наши гости навещают котиков",
-    path: "/images/about_page/guests/guests8.jpg",
+    path: "/images/about_page/guests/8guests.jpg",
   },
 ]
 
 const cats: photoArray[] = [
   {
     label: "Котики ждут вас в гости",
-    path: "/images/about_page/cats/cats0.jpg",
+    path: "/images/about_page/cats/0cats.jpg",
   },
   {
     label: "Котики дождались гостей",
-    path: "/images/about_page/cats/cats5.jpg",
+    path: "/images/about_page/cats/5cats.jpg",
   },
   {
     label: "Котики принимают подарки",
-    path: "/images/about_page/cats/cats2.jpg",
+    path: "/images/about_page/cats/2cats.jpg",
   },
   {
     label: "Котики на обеде",
-    path: "/images/about_page/cats/cats1.jpg",
+    path: "/images/about_page/cats/1cats.jpg",
   },
   {
     label: "Котики-акробаты!",
-    path: "/images/about_page/cats/cats3.jpg",
+    path: "/images/about_page/cats/3cats.jpg",
   },
   {
     label: "Котики играют",
-    path: "/images/about_page/cats/cats4.jpg",
+    path: "/images/about_page/cats/4cats.jpg",
   },
   {
     label: "Ну и конечно...котики отдыхают!",
-    path: "/images/about_page/cats/cats6.jpg",
+    path: "/images/about_page/cats/6cats.jpg",
   },
 ]
 
 const founders: photoArray[] = [
   {
     label: "Создательницы приюта",
-    path: "/images/about_page/founders/founders0.jpg",
+    path: "/images/about_page/founders/0founders.jpg",
   },
   {
     label: "Карина - одна из создательниц приюта",
-    path: "/images/about_page/founders/founders1.jpg",
+    path: "/images/about_page/founders/1founders.jpg",
   },
   {
     label: "Юлия - одна из создательниц приюта",
-    path: "/images/about_page/founders/founders2.jpg",
+    path: "/images/about_page/founders/2founders.jpg",
   },
   {
     label: "Карина и Юлия",
-    path: "/images/about_page/founders/founders3.jpg",
+    path: "/images/about_page/founders/4founders.jpg",
+  },
+  {
+    label: "Карина и Юлия",
+    path: "/images/about_page/founders/3founders.jpg",
   },
 ]
 

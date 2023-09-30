@@ -7,17 +7,13 @@ import { CatGalleryContainer, CatNameGallery } from "../themes/styledComponents"
 
 export default function Gallery({ handleFavCats, favCats, filteredArray }: GalleryProps) {
   const { index, setIndex } = SearchPageStore()
+  const category = filteredArray[0].category === "S" ? "/images/searching/" : "/images/found_home/"
   return (
     <div className="cats-gallery-flex-row line-divider">
       {filteredArray.map((cat, catIndex) => (
         <CatGalleryContainer key={cat.id} onClick={() => setIndex(catIndex)}>
           <HeartIconGallery isFavorite={favCats.includes(cat.img)} onClick={() => handleFavCats(filteredArray[catIndex].img)} />
-          <img
-            className={`gallery-picture ${catIndex === index ? "active-cat" : ""}`}
-            src={`${filteredArray[0].category === "S" ? "/images/searching/" : "/images/found_home/"}${cat.img}.jpg`}
-            alt={cat.name}
-            loading="lazy"
-          />
+          <img className={`gallery-picture ${catIndex === index ? "active-cat" : ""}`} src={`${category + cat.img}.jpg`} alt={cat.name} loading="lazy" />
           <CatNameGallery>{cat.name}</CatNameGallery>
         </CatGalleryContainer>
       ))}

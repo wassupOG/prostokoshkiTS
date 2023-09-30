@@ -21,9 +21,9 @@ export default function App() {
         <div className="main-container">
           <Routes>
             <Route path="/" element={<AboutUs />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/help" element={<HowToHelp />} />
-            <Route path="/contacts" element={<Contacts />} />
+            <Route path="search" element={<SearchPage />} />
+            <Route path="help" element={<HowToHelp />} />
+            <Route path="contacts" element={<Contacts />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>

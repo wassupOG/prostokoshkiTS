@@ -9,7 +9,9 @@ export default function Citation() {
           <FormatQuoteIcon />
           Если у вас есть кошка, вы возвращаетесь не в дом, а домой
           <FormatQuoteIcon />
-          <div>- Пэм Браун</div>
+          <div>
+            <strong>- Пэм Браун</strong>
+          </div>
         </Typography>
       </div>
     </>

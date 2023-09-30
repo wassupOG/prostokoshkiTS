@@ -9,6 +9,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
   const { index, setIndex } = SearchPageStore()
   const disableLeftArrow = index < 1
   const disableRightArrow = index === filteredArray.length - 1
+  const category = filteredArray[0].category === "S" ? "/images/searching/" : "/images/found_home/"
 
   // * If we are dealing with the HomeCats array then render this, else...
   if (filteredArray[0].category === "S") {
@@ -25,7 +26,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
           />
 
           <div className="flex-profile">
-            <img className="profile-picture" src={`/images/searching/${filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
+            <img className="profile-picture" src={`${category + filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
             <div>
               <Tooltip title="Больше фото в группе ВКонтакте по ссылке!">
                 <ProfileLink target="_blank" href={filteredArray[index].vk}>
@@ -68,7 +69,7 @@ export default function Profile({ handleFavCats, favCats, filteredArray }: Profi
           />
 
           <div className="flex-profile">
-            <img className="profile-picture" src={`/images/found_home/${filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
+            <img className="profile-picture" src={`${category + filteredArray[index].img}.jpg`} alt="Cat's profile picture" loading="lazy" />
             <div>
               <h2 className="cat-name">{filteredArray[index].name}</h2>
               <div className="cat-body">
