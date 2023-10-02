@@ -85,15 +85,15 @@ const cats: photoArray[] = [
 
 const founders: photoArray[] = [
   {
-    label: "Создательницы приюта",
+    label: "Основательницы приюта",
     path: "/images/about_page/founders/0founders.jpg",
   },
   {
-    label: "Карина - одна из создательниц приюта",
-    path: "/images/about_page/founders/1founders.jpg",
+    label: "Карина - одна из основательниц приюта",
+    path: "/images/about_page/founders/11founders.jpg",
   },
   {
-    label: "Юлия - одна из создательниц приюта",
+    label: "Юлия - одна из основательниц приюта",
     path: "/images/about_page/founders/2founders.jpg",
   },
   {

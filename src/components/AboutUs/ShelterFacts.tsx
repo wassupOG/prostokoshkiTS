@@ -8,7 +8,7 @@ export default function ShelterFacts() {
     <>
       <Paper elevation={0} sx={{ mt: 3, mb: 3, p: 4, background: theme.palette.background.default }}>
         <Typography fontWeight={600} variant="h6" sx={{ textAlign: "center", mb: 3 }}>
-          За 1,5 года существования приюта, мы осчастливили более 150 кошечек!
+          За 1,5 года существования приюта более 150 хвостиков стали счастливыми домашними любимцами!
         </Typography>
         <Stack direction={{ xs: "column", sm: "row" }} sx={{ justifyContent: "space-evenly", gap: 2 }}>
           <Paper elevation={3} sx={{ padding: 3, borderRadius: 3 }}>
